@@ -37,3 +37,17 @@ This project is a Sentiment Analysis application built using Laravel for the fro
    ```bash
    git clone git@github.com:yokim05/Sentiment-Analisis-NaiveBayes.git
    cd Sentiment-Analisis-NaiveBayes/backend
+2. python3 -m venv venv
+source venv/bin/activate  # Use `venv\Scripts\activate` on Windows
+3. pip install -r requirements.txt
+4. flask run
+
+### Laravel
+
+1. cd Sentiment-Analisis-NaiveBayes/sentiment-Komala
+2. composer install
+3. cp .env.example .env
+php artisan key:generate
+4. php artisan serve
+
+
