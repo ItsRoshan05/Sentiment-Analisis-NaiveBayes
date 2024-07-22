@@ -3,7 +3,7 @@ import joblib
 
 app = Flask(__name__)
 
-# Load model dan TF-IDF Vectorizer yang telah disimpan
+# Load model and TF-IDF Vectorizer
 model = joblib.load('model/sentiment_model.joblib')
 tfidf = joblib.load('model/tfidf_vectorizer.joblib')
 
@@ -11,15 +11,17 @@ tfidf = joblib.load('model/tfidf_vectorizer.joblib')
 def predict():
     data = request.json
     text = data.get('text')
-    
+
     if text:
-        # Transform text menggunakan TF-IDF Vectorizer
+        # Transform text using TF-IDF Vectorizer
         text_tfidf = tfidf.transform([text])
-        
-        # Prediksi menggunakan model
+
+        # Predict sentiment and score
         prediction = model.predict(text_tfidf)[0]
-        
-        return jsonify({'prediction': prediction})
+        score = model.predict_proba(text_tfidf)[0].max()  # Get the probability of the predicted class
+
+        # Return prediction and score in JSON format
+        return jsonify({'prediction': prediction, 'score': score})
     else:
         return jsonify({'error': 'No text provided'}), 400
 
