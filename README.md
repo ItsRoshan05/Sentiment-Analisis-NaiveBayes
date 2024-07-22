@@ -1,6 +1,6 @@
 # Sentiment Analysis Application
 
-This project is a Sentiment Analysis application built using Laravel for the frontend and Flask for the backend. The application uses the Naive Bayes algorithm for sentiment classification.
+Proyek ini merupakan aplikasi Analisis Sentimen yang dibangun menggunakan Laravel untuk frontend dan Flask untuk backend. Aplikasi ini menggunakan algoritma Naive Bayes untuk klasifikasi sentimen.
 
 ## Table of Contents
 
@@ -14,10 +14,10 @@ This project is a Sentiment Analysis application built using Laravel for the fro
 
 ## Features
 
-- User authentication and registration.
-- Sentiment analysis using Naive Bayes classifier.
-- Integration of Flask API for prediction services.
-- CRUD operations for managing data.
+- Otentikasi dan registrasi pengguna.
+- Analisis sentimen menggunakan pengklasifikasi Naive Bayes.
+- Integrasi Flask API untuk layanan prediksi.
+- Operasi CRUD untuk mengelola data.
 
 ## Requirements
 
@@ -37,11 +37,11 @@ This project is a Sentiment Analysis application built using Laravel for the fro
    ```bash
    git clone git@github.com:yokim05/Sentiment-Analisis-NaiveBayes.git
    cd Sentiment-Analisis-NaiveBayes/backend
-2. python3 -m venv venv
-source venv/bin/activate  # Use `venv\Scripts\activate` on Windows
-3. pip install -r requirements.txt
-4. flask run
-
+   2. python3 -m venv venv
+   source venv/bin/activate  # Use `venv\Scripts\activate` on Windows
+   3. pip install -r requirements.txt
+   4. flask run
+   ```
 ### Laravel
 
 1. cd Sentiment-Analisis-NaiveBayes/sentiment-Komala
