@@ -1,53 +1,128 @@
 # Sentiment Analysis Application
 
-Proyek ini merupakan aplikasi Analisis Sentimen yang dibangun menggunakan Laravel untuk frontend dan Flask untuk backend. Aplikasi ini menggunakan algoritma Naive Bayes untuk klasifikasi sentimen.
+Aplikasi ini melakukan analisis sentimen menggunakan metode TF-IDF dan Naive Bayes. Aplikasi ini dibangun dengan menggunakan framework Laravel untuk backend dan Flask untuk layanan machine learning.
 
-## Table of Contents
+## Daftar Isi
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
+- [Fitur](#fitur)
+- [Teknologi](#teknologi)
+- [Persyaratan](#persyaratan)
+- [Instalasi](#instalasi)
+- [Penggunaan](#penggunaan)
+- [Kontribusi](#kontribusi)   
 
-## Features
+## Fitur
 
-- Otentikasi dan registrasi pengguna.
-- Analisis sentimen menggunakan pengklasifikasi Naive Bayes.
-- Integrasi Flask API untuk layanan prediksi.
-- Operasi CRUD untuk mengelola data.
+- Analisis sentimen dari teks input pengguna.
+- Menampilkan hasil analisis dalam bentuk positif, negatif, atau netral.
+- Implementasi model machine learning menggunakan TF-IDF dan Naive Bayes.
 
-## Requirements
+## Teknologi
+
+- Backend: Laravel
+- Machine Learning: Flask
+- Bahasa Pemrograman: PHP, Python
+- Lainnya: HTML, CSS, JavaScript
+
+## Persyaratan
 
 - PHP >= 7.3
 - Composer
-- Laravel 8.x
-- Python 3.8
+- Python >= 3.6
+- pip
+- Laravel
 - Flask
-- Scikit-learn
-- MySQL or any other supported database
+- scikit-learn
 
-## Installation
+## Instalasi
 
-### Backend (Flask)
+### Backend (Laravel)
 
-1. Clone the repository:
-   ```bash
-   git clone git@github.com:yokim05/Sentiment-Analisis-NaiveBayes.git
-   cd Sentiment-Analisis-NaiveBayes/backend
-   2. python3 -m venv venv
-   source venv/bin/activate  # Use `venv\Scripts\activate` on Windows
-   3. pip install -r requirements.txt
-   4. flask run
-   ```
-### Laravel
+1. Clone repositori ini:
+    ```bash
+    git clone https://github.com/username/sentiment-analysis-app.git
+    cd sentiment-analysis-app
+    ```
 
-1. cd Sentiment-Analisis-NaiveBayes/sentiment-Komala
-2. composer install
-3. cp .env.example .env
-php artisan key:generate
-4. php artisan serve
+2. Instal dependensi Laravel:
+    ```bash
+    composer install
+    ```
 
+3. Buat file `.env` dari contoh:
+    ```bash
+    cp .env.example .env
+    ```
+
+4. Generate application key:
+    ```bash
+    php artisan key:generate
+    ```
+
+5. Konfigurasi database di file `.env` sesuai dengan pengaturan database Anda.
+
+6. Jalankan migrasi:
+    ```bash
+    php artisan migrate
+    ```
+
+7. Jalankan server Laravel:
+    ```bash
+    php artisan serve
+    ```
+
+### Machine Learning Service (Flask)
+
+1. Masuk ke direktori `flask`:
+    ```bash
+    cd flask
+    ```
+
+2. Buat virtual environment:
+    ```bash
+    python -m venv venv
+    ```
+
+3. Aktifkan virtual environment:
+
+    - Untuk Windows:
+      ```bash
+      venv\Scripts\activate
+      ```
+    - Untuk MacOS/Linux:
+      ```bash
+      source venv/bin/activate
+      ```
+
+4. Instal dependensi Python:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+5. Jalankan server Flask:
+    ```bash
+    flask run
+    ```
+
+## Penggunaan
+
+1. Buka browser dan akses aplikasi Laravel:
+    ```
+    http://localhost:8000
+    ```
+
+2. Input teks yang ingin dianalisis sentimennya.
+
+3. Klik tombol "Prediksi" dan hasil analisis sentimen akan ditampilkan.
+
+
+## Kontribusi
+
+Kontribusi sangat diterima! Silakan fork repositori ini dan buat pull request dengan perubahan yang diusulkan.
+
+1. Fork repositori ini.
+2. Buat branch fitur (`git checkout -b fitur-anda`).
+3. Commit perubahan Anda (`git commit -am 'Tambah fitur'`).
+4. Push ke branch (`git push origin fitur-anda`).
+5. Buat Pull Request.
 
