@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\SentimentController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PredictionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +31,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('admin.index');
     });
+
+    Route::resource('users', UserController::class);
+    Route::resource('predictions', PredictionController::class);
+    Route::get('/sentiment', [SentimentController::class,'index'])->name('sentiment.form');
+    Route::post('/sentiment',[SentimentController::class, 'predict'])->name('sentiment.prediksi');
 });
 
 
@@ -40,6 +47,3 @@ Route::middleware(['auth'])->group(function () {
 //     return view('layouts.tables-data');
 // });
 
-
-// Route::get('/sentiment', [SentimentController::class,'index'])->name('sentiment.form');
-// Route::post('/sentiment',[SentimentController::class, 'predict'])->name('sentiment.prediksi');

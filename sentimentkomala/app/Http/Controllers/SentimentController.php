@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Models\Predictions;
+use Illuminate\Support\Facades\Auth;
 
 class SentimentController extends Controller
 {
@@ -21,7 +23,21 @@ class SentimentController extends Controller
         ]);
 
         $prediction = $response->json()['prediction'];
+        $score = $response->json()['score'];
 
-        return view('sentiment.sentiment', ['prediction' => $prediction]);
+        $sentimentPrediction = Predictions::create([
+            'text' => $text,
+            'prediction' => $prediction,
+            'score' => $score,
+            'user_id'=>Auth::user()->id
+        ]);
+
+        // Associate prediction with current user
+        // $userId = Auth::user()->id; // Assuming you're using Laravel authentication
+        // $sentimentPrediction->user_id = $userId;
+        $sentimentPrediction->save();
+
+
+        return view('sentiment.sentiment', ['prediction' => $prediction, 'score'=>$score, 'text'=>$text]);
     }
 }

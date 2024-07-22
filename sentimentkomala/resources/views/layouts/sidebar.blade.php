@@ -13,7 +13,7 @@
   <li class="nav-heading">Sentiment</li>
 
   <li class="nav-item">
-    <a class="nav-link " href="/dashboard">
+    <a class="nav-link " href="/sentiment">
       <i class="bi bi-gear"></i>
       <span>Prediksi</span>
     </a>
@@ -25,13 +25,13 @@
     </a>
     <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="#">
-          <i class="bi bi-circle"></i><span>General Tables</span>
+        <a href="/users">
+          <i class="bi bi-circle"></i><span>Users</span>
         </a>
       </li>
       <li>
-        <a href="/tables-data">
-          <i class="bi bi-circle"></i><span>Data Tables</span>
+        <a href="/predictions">
+          <i class="bi bi-circle"></i><span>Data Prediksi</span>
         </a>
       </li>
     </ul>
