@@ -26,9 +26,9 @@ Aplikasi ini melakukan analisis sentimen menggunakan metode TF-IDF dan Naive Bay
 
 ## Persyaratan
 
-- PHP >= 7.3
+- PHP >= 8.1.10
 - Composer
-- Python >= 3.6
+- Python >= 3.10
 - pip
 - Laravel
 - Flask
