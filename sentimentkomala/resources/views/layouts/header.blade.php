@@ -27,6 +27,7 @@
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
   <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('assets/css/preloader-style.css') }}">
 
   @yield('css')
 
@@ -40,6 +41,11 @@
 </head>
 
 <body>
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">

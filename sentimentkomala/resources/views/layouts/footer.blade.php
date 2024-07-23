@@ -25,6 +25,14 @@
 <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
 
 <script src="{{ asset('assets/js/main.js') }}"></script>
+<!-- <script src="{{ asset('assets/js/preloader.js') }}"></script> -->
+<script>
+  window.onload = function() {
+    var loaderWrapper = document.getElementById("loader-wrapper");
+    loaderWrapper.style.display = "none";
+  };
+</script>
+
   @yield('js')
 
 </body>
