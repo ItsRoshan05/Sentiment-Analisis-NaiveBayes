@@ -89,7 +89,7 @@
                       <button class="btn btn-primary w-100" type="submit">Create Account</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Already have an account? <a href="pages-login.html">Log in</a></p>
+                      <p class="small mb-0">Already have an account? <a href="/login">Log in</a></p>
                     </div>
                   </form>
 
