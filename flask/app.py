@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 import joblib
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -24,6 +25,16 @@ def predict():
         return jsonify({'prediction': prediction, 'score': score})
     else:
         return jsonify({'error': 'No text provided'}), 400
+
+@app.route('/data', methods=['GET'])
+def get_data():
+    # Load CSV data
+    df = pd.read_csv('data/preprocessing.csv')
+    
+    # Convert DataFrame to JSON
+    data_json = df.to_dict(orient='records')
+    
+    return jsonify(data_json)
 
 if __name__ == '__main__':
     app.run(debug=True)

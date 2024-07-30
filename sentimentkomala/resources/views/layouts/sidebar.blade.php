@@ -34,6 +34,11 @@
           <i class="bi bi-circle"></i><span>Data Prediksi</span>
         </a>
       </li>
+      <li>
+        <a href="/data">
+          <i class="bi bi-circle"></i><span>Data Pelatihan</span>
+        </a>
+      </li>
     </ul>
   </li><!-- End Tables Nav -->
 
