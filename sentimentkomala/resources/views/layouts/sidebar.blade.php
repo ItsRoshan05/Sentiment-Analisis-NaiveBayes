@@ -41,7 +41,12 @@
       </li>
     </ul>
   </li><!-- End Tables Nav -->
-
+  <li class="nav-item">
+    <a class="nav-link" href="/confussion">
+      <i class="bi bi-gear"></i>
+      <span>Confussion Matriks</span>
+    </a>
+  </li>
 
 </ul>
 

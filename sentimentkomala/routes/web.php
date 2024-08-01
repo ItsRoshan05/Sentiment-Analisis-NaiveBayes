@@ -27,7 +27,7 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-
+    Route::view('/confussion','predictions.confussion');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/data', [DataController::class, 'index'])->name('data');
     Route::get('/', function () {
