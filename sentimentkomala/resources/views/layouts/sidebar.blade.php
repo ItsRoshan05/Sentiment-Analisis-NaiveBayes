@@ -39,6 +39,16 @@
           <i class="bi bi-circle"></i><span>Data Pelatihan</span>
         </a>
       </li>
+      <li>
+        <a href="/testdatapredict">
+          <i class="bi bi-circle"></i><span>Data Pelatihan Prediksi</span>
+        </a>
+      </li>
+      <li>
+        <a href="/tfidf">
+          <i class="bi bi-circle"></i><span>Data tfidf</span>
+        </a>
+      </li>
     </ul>
   </li><!-- End Tables Nav -->
   <li class="nav-item">

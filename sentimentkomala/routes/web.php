@@ -33,7 +33,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('admin.index');
     });
-
+    
+    Route::get('/testdatapredict', [DataController::class, 'fetchdatapredict']);
+    Route::get('/tfidf', [DataController::class, 'fetchTfidf']);
     Route::resource('users', UserController::class);
     Route::resource('predictions', PredictionController::class);
     Route::get('/sentiment', [SentimentController::class,'index'])->name('sentiment.form');
